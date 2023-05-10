@@ -98,5 +98,3 @@ Build an API inside the `api` folder with endpoints for:
 - In your solution, it is essential that you follow best practices and produce clean and professional results.
 - Schedule time to review, refine, and assess your work and perform basic professional polishing.
 
-- Lionel Testing Connection
-
