@@ -2,7 +2,17 @@
 const db = require("../../data/dbConfig");
 
 const get = async () => {
-  const res = await db("tasks");
+  const res = await db("tasks")
+    .leftJoin("projects", "projects.project_id", "tasks.project_id")
+    .select(
+      "tasks.task_id",
+      "tasks.task_description",
+      "tasks.task_notes",
+      "tasks.task_completed",
+      "projects.project_name",
+      "projects.project_description"
+    );
+
   return res.map((task) => ({
     ...task,
     task_completed: Boolean(task.task_completed),
@@ -24,3 +34,5 @@ module.exports = {
   getTaskById,
   insert,
 };
+
+// - Example of response body: `[{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_name:"bar","project_description":null}]`

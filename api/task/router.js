@@ -18,13 +18,8 @@ router.get("/", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   try {
-    const { task_description, task_notes, project_id } = req.body;
-    if (
-      !task_description ||
-      !task_notes ||
-      !Object.hasOwn(req.body, "task_completed") ||
-      !project_id
-    ) {
+    const { task_description, project_id } = req.body;
+    if (!task_description || !project_id) {
       res.status(400).json({
         message: `Missing either task_description or task_notes or task_completed or project_id`,
       });

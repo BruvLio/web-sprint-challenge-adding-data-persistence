@@ -17,8 +17,8 @@ router.get("/", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   try {
-    const { resource_name, resource_description } = req.body;
-    if (!resource_name || !resource_description) {
+    const { resource_name } = req.body;
+    if (!resource_name) {
       res.status(400).json({
         message: `Resource needs name and description`,
       });
