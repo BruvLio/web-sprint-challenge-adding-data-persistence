@@ -24,7 +24,7 @@ In this project you will be given a set of requirements and must design a databa
 3. `api/server.js` - Done
 4. `model.js` inside `api/project`, `api/resource` and `api/task` - Wip
 5. `router.js` inside `api/project`, `api/resource` and `api/task` - Done
-6. migration file(s)
+6. migration file(s) - Done
 7. seed file(s) **optional**
 
 ### Required Dependencies
@@ -37,30 +37,30 @@ Add `"start"`. `"server"`, `"migrate"` and `"rollback"` scripts to the `package.
 
 ### Required Tables
 
-Build the migration(s) in Knex inside the `data/migrations` folder using appropriate data types and constraints. **You must use the table names and the column names described below.** To give a primary key a name different than `id`, do `table.increments("project_id")` instead of `table.increments()`. - WIP
+Build the migration(s) in Knex inside the `data/migrations` folder using appropriate data types and constraints. **You must use the table names and the column names described below.** To give a primary key a name different than `id`, do `table.increments("project_id")` instead of `table.increments()`. - Done
 
 - [ ] A **project** is what needs to be done and is stored in a `projects` table with the following columns:
 
-  - [ ] `project_id` - primary key
-  - [ ] `project_name` - required
-  - [ ] `project_description` - optional
-  - [ ] `project_completed` - the database defaults it to `false` (integer 0) if not provided
+  - [ ] `project_id` - primary key - Done 
+  - [ ] `project_name` - required - Done 
+  - [ ] `project_description` - optional - Done 
+  - [ ] `project_completed` - the database defaults it to `false` (integer 0) if not provided - Done 
 
 - [ ] A **resource** is anything needed to complete a project and is stored in a `resources` table with the following columns:
 
-  - [ ] `resource_id` - primary key
-  - [ ] `resource_name` - required and unique
-  - [ ] `resource_description` - optional
+  - [ ] `resource_id` - primary key - Done  
+  - [ ] `resource_name` - required and unique - Done 
+  - [ ] `resource_description` - optional - Done 
 
 - [ ] A **task** is one of the steps needed to complete a project and is stored in a `tasks` table with the following columns:
 
-  - [ ] `task_id` - primary key
-  - [ ] `task_description` - required
-  - [ ] `task_notes` - optional
-  - [ ] `task_completed` - the database defaults it to `false` (integer 0) if not provided
-  - [ ] `project_id` - required and points to an actual `project_id` in the `projects` table
+  - [ ] `task_id` - primary key - Done 
+  - [ ] `task_description` - required - Done
+  - [ ] `task_notes` - optional - Done 
+  - [ ] `task_completed` - the database defaults it to `false` (integer 0) if not provided - Done 
+  - [ ] `project_id` - required and points to an actual `project_id` in the `projects` table - Done 
 
-- [ ] A **resource assignment** connects a resource and a project, and is stored in a `project_resources` table. You decide what columns to use.
+- [ ] A **resource assignment** connects a resource and a project, and is stored in a `project_resources` table. You decide what columns to use. - Done
 
 ### Required Endpoints
 
