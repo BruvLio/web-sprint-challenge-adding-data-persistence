@@ -8,7 +8,7 @@ exports.seed = async function (knex) {
   await knex("projects").insert([
     {
       project_name: "Larry",
-      project_description: "Code hangman game",
+      project_description: "Design website",
       project_completed: true,
     },
     {
@@ -20,6 +20,11 @@ exports.seed = async function (knex) {
       project_name: "LaToya",
       project_description: "Finish Sauce samples",
       project_completed: true,
+    },
+    {
+      project_name: "Noks",
+      project_description: "Code hangman game",
+      project_completed: false,
     },
   ]);
 };
