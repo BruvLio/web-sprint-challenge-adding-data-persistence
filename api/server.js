@@ -13,6 +13,7 @@ server.use("/api/project", projectRouter);
 server.use("/api/resource", resourceRouter);
 server.use("/api/task", taskRouter);
 
+//eslint-disable-next-line
 server.use((err, req, res, next) => {
   res.status(500).json({
     message: err.message,
