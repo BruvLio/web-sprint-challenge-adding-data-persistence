@@ -15,12 +15,16 @@ exports.seed = async function (knex) {
       resource_description: "focus tool",
     },
     {
-      resource_name: "water bottle",
-      resource_description: "water to keep you hydrated",
+      resource_name: "pot",
+      resource_description: "to make sauce",
     },
     {
       resource_name: "lofi music",
       resource_description: "helps with focusin on task",
+    },
+    {
+      resource_name: "ipad",
+      resource_description: "draw desing",
     },
   ]);
 };
