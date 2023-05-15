@@ -4,10 +4,10 @@ const express = require("express");
 
 const Projects = require("./model");
 
-const projectRouter = express.Router();
+const router = express.Router();
 
-projectRouter.get("/", async (req, res, next) => {
+router.get("/", async (req, res, next) => {
   console.log("made it to project router");
 });
 
-module.exports = projectRouter;
+module.exports = router;
