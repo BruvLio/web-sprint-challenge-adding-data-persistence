@@ -11,7 +11,41 @@ exports.up = async function (knex) {
       table.boolean("project_completed").defaultTo(false);
     })
     //do we need to make the resourece reference the projects table?
-    .createTable("resource_id", () => {});
+    .createTable("resources", (table) => {
+      table.increments("resource_id");
+      table.string("resource_name").notNullable().unique();
+      table.string("resource_description");
+    })
+    .createTable("tasks", (table) => {
+      table.increments("task_id");
+      table.string("task_description").notNullable();
+      table.string("task_notes");
+      table.boolean("task_completed").defaultTo(false);
+      table
+        .integer("project_id")
+        .notNullable()
+        .references("project_id")
+        .inTable("projects")
+        .onDelete("RESTRICT")
+        .onUpdate("RESTRICT");
+    })
+    .createTable("project_resources", (table) => {
+      table.increments();
+      table
+        .integer("project_id")
+        .notNullable()
+        .references("project_id")
+        .inTable("projects")
+        .onDelete("RESTRICT")
+        .onUpdate("RESTRICT");
+      table
+        .integer("resource_id")
+        .notNullable()
+        .references("resource_id")
+        .inTable("resources")
+        .onDelete("RESTRICT")
+        .onUpdate("RESTRICT");
+    });
 };
 
 /**
@@ -20,15 +54,11 @@ exports.up = async function (knex) {
  */
 exports.down = async function (knex) {
   await knex.schema
-    .dropTableIfExists("projects")
-    .dropTableIfExists("projects")
-    .dropTableIfExists("projects")
+    .dropTableIfExists("project_resources")
+    .dropTableIfExists("tasks")
+    .dropTableIfExists("resources")
     .dropTableIfExists("projects");
 };
 
-// - [ ] A **resource** is anything needed to complete a project and is stored
-// in a `resources` table with the following columns:
-
-//   - [ ] `resource_id` - primary key
-//   - [ ] `resource_name` - required and unique
-//   - [ ] `resource_description` - optional
+// - [ ] A **resource assignment** connects a resource and a project, and is stored
+// in a `project_resources` table. You decide what columns to use.
