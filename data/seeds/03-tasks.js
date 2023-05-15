@@ -15,19 +15,19 @@ exports.seed = async function (knex) {
     {
       task_description: "Grocery shopping",
       task_notes: "shop for ingredients for sauce",
-      task_completed: false,
+      task_completed: true,
       project_id: 3,
     },
     {
       task_description: "Planning",
-      task_notes: "nul",
+      task_notes: "null",
       task_completed: false,
       project_id: 1,
     },
     {
       task_description: "Convert code to use classes",
-      task_notes: "",
-      task_completed: false,
+      task_notes: "null",
+      task_completed: true,
       project_id: 4,
     },
   ]);

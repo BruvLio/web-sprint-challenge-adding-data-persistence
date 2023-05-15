@@ -24,7 +24,7 @@ exports.seed = async function (knex) {
     },
     {
       resource_name: "ipad",
-      resource_description: "draw desing",
+      resource_description: "draw design",
     },
   ]);
 };
