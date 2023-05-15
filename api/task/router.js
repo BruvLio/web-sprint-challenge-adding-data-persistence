@@ -2,7 +2,7 @@
 
 const express = require("express");
 
-const Task = require("./model");
+const Tasks = require("./model");
 
 const router = express.Router();
 

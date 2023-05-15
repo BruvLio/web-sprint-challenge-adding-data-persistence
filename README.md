@@ -37,7 +37,7 @@ Add `"start"`. `"server"`, `"migrate"` and `"rollback"` scripts to the `package.
 
 ### Required Tables
 
-Build the migration(s) in Knex inside the `data/migrations` folder using appropriate data types and constraints. **You must use the table names and the column names described below.** To give a primary key a name different than `id`, do `table.increments("project_id")` instead of `table.increments()`.
+Build the migration(s) in Knex inside the `data/migrations` folder using appropriate data types and constraints. **You must use the table names and the column names described below.** To give a primary key a name different than `id`, do `table.increments("project_id")` instead of `table.increments()`. - WIP
 
 - [ ] A **project** is what needs to be done and is stored in a `projects` table with the following columns:
 
