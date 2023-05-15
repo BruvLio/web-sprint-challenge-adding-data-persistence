@@ -8,7 +8,19 @@ const router = express.Router();
 
 //eslint-disable-next-line
 router.get("/", async (req, res, next) => {
-  console.log("made it to task router");
+  try {
+    const task = await Tasks.get();
+    res.status(200).json(task);
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.post("/", async (req, res, next) => {
+  try {
+  } catch (err) {
+    next(err);
+  }
 });
 
 module.exports = router;
