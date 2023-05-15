@@ -22,7 +22,7 @@ In this project you will be given a set of requirements and must design a databa
 1. `package.json` - Done
 2. `index.js` - Done
 3. `api/server.js` - Done
-4. `model.js` inside `api/project`, `api/resource` and `api/task`
+4. `model.js` inside `api/project`, `api/resource` and `api/task` - Wip
 5. `router.js` inside `api/project`, `api/resource` and `api/task` - Done
 6. migration file(s)
 7. seed file(s) **optional**
@@ -33,7 +33,7 @@ The project needs some additional NPM dependencies in order to work.
 
 ### Required Scripts
 
-Add `"start"`. `"server"`, `"migrate"` and `"rollback"` scripts to the `package.json` file. The tests depend on these scripts being correct!
+Add `"start"`. `"server"`, `"migrate"` and `"rollback"` scripts to the `package.json` file. The tests depend on these scripts being correct! - Done
 
 ### Required Tables
 
