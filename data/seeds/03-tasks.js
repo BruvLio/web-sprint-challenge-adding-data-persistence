@@ -16,19 +16,19 @@ exports.seed = async function (knex) {
       task_description: "rowValue1",
       task_notes: "",
       task_completed: false,
-      project_id: 1,
+      project_id: 2,
     },
     {
       task_description: "rowValue1",
       task_notes: "",
       task_completed: false,
-      project_id: 1,
+      project_id: 3,
     },
     {
       task_description: "rowValue1",
       task_notes: "",
       task_completed: false,
-      project_id: 1,
+      project_id: 4,
     },
   ]);
 };
