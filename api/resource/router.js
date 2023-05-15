@@ -4,12 +4,13 @@
 
 const express = require("express");
 
-const Resource = require("./model");
+const Resources = require("./model");
 
 const router = express.Router();
 
+//eslint-disable-next-line
 router.get("/", async (req, res, next) => {
-  console.log("made it resource router");
+  console.log("made it to resource router");
 });
 
 module.exports = router;

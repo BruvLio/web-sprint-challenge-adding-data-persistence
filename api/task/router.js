@@ -6,6 +6,7 @@ const Task = require("./model");
 
 const router = express.Router();
 
+//eslint-disable-next-line
 router.get("/", async (req, res, next) => {
   console.log("made it to task router");
 });
