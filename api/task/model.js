@@ -2,7 +2,11 @@
 const db = require("../../data/dbConfig");
 
 const get = async () => {
-  return db("tasks");
+  const res = await db("tasks");
+  return res.map((task) => ({
+    ...task,
+    task_completed: Boolean(task.task_completed),
+  }));
 };
 
 const getTaskById = async (task_id) => {
