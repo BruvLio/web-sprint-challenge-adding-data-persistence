@@ -10,7 +10,8 @@ const get = async () => {
 };
 
 const getTaskById = async (task_id) => {
-  return db("tasks").where("task_id", task_id).first();
+  const res = await db("tasks").where("task_id", task_id).first();
+  return { ...res, task_completed: Boolean(res.task_completed) };
 };
 
 const insert = async (task) => {
